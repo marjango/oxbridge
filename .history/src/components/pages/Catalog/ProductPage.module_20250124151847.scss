@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    // background-color: #FF3E3E;
+    .card {
+      width: 600px;
+      height: 720px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .colors {
+        width: auto;
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        top: 25px;
+        left: 12px;
+        .color1, .color2, .color3 {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 2px solid black;
+        }
+        .color1 {
+          background-color: black;
+        }
+        .color2 {
+          background-color: #FF3E3E;
+        }
+        .color3 {
+          background-color: #F1D8A1;
+        }
+      }
+      .add {
+        position: absolute;
+        top: 25px;
+        right: 0;
+
+        .moreBtn {
+          width: 170px;
+          height: 50px;
+          background-color: #D9D9D9;
+          border: none;
+          font-size: 16px;
+          letter-spacing: 1.67px;
+        }
+      }
+      .arrows {
+        .left, .right {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: #D9D9D9;
+        }
+        .left {
+          position: absolute;
+          top: 338px;
+          left: 16px;
+          background-image: url(./img/arrow.svg);
+          background-size: 60%;
+          background-repeat: no-repeat; 
+          background-position: center;
+        }
+        .right {
+          position: absolute;
+          top: 338px;
+          right: 16px;
+          background-image: url(./img/arrow.svg);
+          transform: rotate(180deg);
+          background-size: 60%;
+          background-repeat: no-repeat; 
+          background-position: center;
+        }
+      }
+      .cardImg {
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        top: 30px;
+        bottom: 0;
+        object-fit: cover;
+        background-repeat: no-repeat; 
+        background-size: contain;     
+        background-position: center;
+        z-index: -1;
+      }
+      .productDetails {
+        position: absolute;
+        bottom: 0;
+        width: 600px;
+        height: 70px;
+        background-color: #828282;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        p {
+          font-size: 20px;
+          color: white;
+          letter-spacing: 1.67px;
+          line-height: 36px;
+          text-transform: lowercase;
+        }
+        .buttons {
+          display: flex;
+          gap: 25px;
+          margin-left: 70px;
+          .cartIcon {
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat; 
+            background-size: cover;     
+            background-position: center;
+            background-image: url(./img/shopping-cart\ 1.svg);
+          }
+          .heartIcon {
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat; 
+            background-size: cover;     
+            background-position: center;
+            background-image: url(./img/heart.svg);
+          }
+        }
+      }
+    }
+    
+      
+  }
+  
+

@@ -1,0 +1,133 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  * {
+    font-family: 'montserrat';
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 80%;
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+  @media (max-width: 1024px) {
+    .burger {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .burger {
+      display: block;
+    }
+    .logo {
+      display: none;
+    }
+    .navBtn {
+      display: none;
+    }
+  }
+  
+  .btnBurger {
+    z-index: 100;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    
+    span {
+      height: 2px;
+      width: 40px;
+      position: absolute;
+      background-color: white;
+      transition: 0.4s;
+  
+      &:nth-child(3) {
+        bottom: 7px;
+      }
+      &:nth-child(2) {
+        top: 7px;
+      }
+      &:nth-child(1) {
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
+      }
+    }
+  }
+  
+  /* Контент бургера */
+  .burgerContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid white;
+    height: 100%;
+    background-color: black;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+  
+      li {
+        margin: 20px 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+  
+  /* Показываем контент, когда меню открыто */
+  .burgerContent.open {
+    transform: translateY(0);
+  }
+  
+  /* Анимация бургера */
+  .btnBurger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(0px, 8px);
+  }
+  
+  .btnBurger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .btnBurger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -5px);
+  }
+  
+  /* Отображаем бургер-кнопку на маленьких экранах */
+  @media (max-width: 1024px) {
+    .container {
+      width: 90%;
+    }
+    .btnBurger {
+      display: block;
+    }
+  }
+  
+  /* Скрываем элементы навигации на малых экранах */
+  @media (max-width: 1024px) {
+    header .navbar .container ul {
+      display: none;
+    }
+  }
+  

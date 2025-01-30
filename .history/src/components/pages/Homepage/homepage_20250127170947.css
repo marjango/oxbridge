@@ -1,0 +1,260 @@
+@charset "UTF-8";
+.headerMain {
+  margin-top: 100px;
+  height: auto;
+  width: 100%;
+  background-image: url(../../img/headerIMG.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+@media (max-width: 768px) {
+  .headerMain {
+    background-position: 40%;
+  }
+}
+.headerMain .headerInfo {
+  height: 450px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+@media (max-width: 480px) {
+  .headerMain .headerInfo {
+    height: 466px;
+  }
+}
+.headerMain .headerInfo .title {
+  text-align: center;
+  width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media (max-width: 480px) {
+  .headerMain .headerInfo .title {
+    width: 73%;
+  }
+}
+.headerMain .headerInfo .title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -50px;
+  left: 45%;
+}
+@media (max-width: 1020px) {
+  .headerMain .headerInfo .title::after {
+    width: 0;
+  }
+}
+.headerMain .headerInfo .title h1 {
+  font-size: 40px;
+}
+@media (max-width: 480px) {
+  .headerMain .headerInfo .title h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+.headerMain .headerInfo .title p {
+  font-size: 15px;
+  line-height: 25px;
+}
+@media (max-width: 480px) {
+  .headerMain .headerInfo .title p {
+    font-size: 20px;
+  }
+}
+.headerMain .headerInfo .btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 13px;
+  padding: 10px 48px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.headerMain .headerInfo .btn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+@media (max-width: 480px) {
+  .headerMain .headerInfo .btn {
+    padding: 20px 75px;
+    font-size: 25px;
+    line-height: 20px;
+  }
+}
+
+main .sct1 {
+  display: flex;
+  margin: 15px auto;
+  position: relative;
+}
+main .sct1 .sct1-block {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 500px;
+  width: 50%;
+  background-image: url(../../img/homepage.svg);
+}
+@media (max-width: 480px) {
+  main .sct1 .sct1-block {
+    background-image: url(../../img/homepage11.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+main .sct1 .sct1-block h1 {
+  color: white;
+  font-size: 40px;
+}
+main .sct1 .sct1-block .t1 {
+  position: absolute;
+  top: 50%;
+  left: 29%;
+}
+main .sct1 .sct1-block .t2 {
+  position: absolute;
+  top: 30%;
+  left: 37%;
+}
+main .sct1 .sct1-block:nth-child(2) {
+  background-image: url(../../img/homepage2.svg);
+}
+@media (max-width: 480px) {
+  main .sct1 .sct1-block:nth-child(2) {
+    background-image: url(../../img/homepage22.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+main .sct2 {
+  background-color: black;
+}
+main .sct2 .container {
+  height: 730px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .sct2 .container img {
+  width: 530px;
+}
+main .sct2 .container .sct2Title {
+  color: white;
+  width: 40%;
+  padding-left: 20px;
+}
+main .sct2 .container .sct2Title h1 {
+  margin-bottom: 80px;
+}
+main .sct2 .container .sct2Title p {
+  line-height: 25px;
+}
+@media (max-width: 768px) {
+  main .sct2 {
+    position: relative;
+  }
+  main .sct2 .container {
+    height: 1000px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .sct2 .container img {
+    position: relative;
+    top: 126px;
+    width: 392px;
+  }
+  main .sct2 .container .sct2Title {
+    display: grid;
+    width: 100%;
+    position: absolute;
+  }
+  main .sct2 .container .sct2Title h1 {
+    font-size: 30px;
+    position: absolute;
+    top: 80px;
+    left: 36px;
+  }
+  main .sct2 .container .sct2Title p {
+    top: 570px;
+    width: 361px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+main .sct3 {
+  position: relative;
+  background-color: #C1C1C1;
+  margin: 15px auto;
+  height: 764px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .sct3 img {
+  position: absolute;
+  width: 50%;
+}
+main .sct3 img:nth-child(2) {
+  bottom: 0;
+  right: 0;
+}
+main .sct3 img:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+main .sct3 .title {
+  z-index: 1;
+  width: 50%;
+  text-align: center;
+  color: black;
+  padding: 50px 0;
+  background-color: rgba(235, 235, 235, 0.5);
+}
+main .sct3 .title h1 {
+  line-height: 35px;
+}
+main .sct4 {
+  background-image: url(../../img/sct4.svg);
+  width: 100%;
+  height: 910px;
+}
+main .sct4 .blur {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(30px); /* степень размытия */
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .sct4 .blur button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 41px 83px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+}/*# sourceMappingURL=homepage_20250127170947.css.map */

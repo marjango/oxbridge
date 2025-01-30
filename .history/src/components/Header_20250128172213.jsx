@@ -1,0 +1,47 @@
+import React from 'react'
+import  './style.css'
+import { useState } from 'react';
+import {Link} from 'react-router-dom'
+
+export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen((prevState) => !prevState);
+    };
+  return (
+    <div>
+        <header>
+            <nav className='navbar'>
+                <div className="container">
+                <div className="burger">
+                    <div className={`btnBurger ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div className={`burgerContent ${isMenuOpen ? "open" : ""}`}>
+                        <ul>
+                            <li>новости в мире мод</li>
+                            <li>каталог</li>
+                            <li>сезонные</li>
+                            <li>отзывы</li>
+                            <li>СВЯЗАТЬСЯ С НАМИ</li>
+                        </ul>
+                    </div>
+                </div>
+               
+                <Link to='/' className='logo'>OXBRIDGE</Link> 
+                <ul>
+                    <Link className='links' to='/Catalog'>КАТАЛОГ</Link>
+                    <Link className='links' to='/Seasonal'>СЕЗОННЫЕ</Link>
+                    <Link className='links' to='/Feedback'>СВЯЗАТЬСЯ С НАМИ</Link>
+                </ul>
+                <button className="navBtn">ЗАКАЗ</button>
+                </div>
+            </nav>
+            
+        </header>
+    </div>
+  )
+}

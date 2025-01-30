@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    // background-color: #FF3E3E;
+    .card {
+      width: 806px;
+      height: 1069px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .colors {
+        width: auto;
+        display: flex;
+        gap: 35px;
+        position: absolute;
+        top: 25px;
+        left: 12px;
+        .color1, .color1, .color1 {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          border: 1px solid black;
+        }
+        .color1 {
+          background-color: black;
+        }
+        .color2 {
+          background-color: #FF3E3E;
+        }
+        .color13 {
+          background-color: F1D8A1;
+        }
+      }
+      .add {
+        position: absolute;
+        top: 25px;
+        right: 0;
+
+      }
+
+    }
+    .cardImg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        object-fit: cover;
+        background-repeat: no-repeat; /* Изображение не повторяется */
+        background-size: cover;      /* Масштабировать, чтобы покрыть элемент */
+        background-position: center;
+        z-index: -100;
+      }
+      
+      .productImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+  
+

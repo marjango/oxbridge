@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .card {
+  width: 806px;
+  height: 1069px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.container .card .colors {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  top: 25px;
+  left: 12px;
+}
+.container .card .colors .color1, .container .card .colors .color1, .container .card .colors .color1 {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.container .card .colors .color1 {
+  background-color: black;
+}
+.container .card .colors .color2 {
+  background-color: #FF3E3E;
+}
+.container .card .colors .color13 {
+  background-color: F1D8A1;
+}
+.container .card .add {
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+.container .cardImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: no-repeat, center, contain;
+}
+.container .productImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=ProductPage.module_20250123073605.css.map */

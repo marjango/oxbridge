@@ -1,0 +1,110 @@
+.catalog {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+.catalog .catalogContainer {
+  position: relative;
+  z-index: 2;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  row-gap: 54px;
+  margin: 0 auto;
+}
+.catalog .catalogContainer .card {
+  width: 230px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background-color: #9B9B9B;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 15px 0 7px 0;
+}
+.catalog .catalogContainer .card .cardImg {
+  width: 205px;
+  height: 235px;
+  overflow: hidden;
+  background-color: white;
+}
+.catalog .catalogContainer .card .cardImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.catalog .catalogContainer .card .cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 190px;
+}
+.catalog .catalogContainer .card h1 {
+  font-family: "Inter";
+  font-size: 12px;
+  text-transform: lowercase;
+  color: white;
+}
+.catalog .catalogContainer .card .heartIcon {
+  width: 27px;
+  height: 27px;
+  background-image: url(./img/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.catalog .catalogContainer .card .heartIcon:hover {
+  transform: scale(1.1);
+  background-image: url("./img/heart_filled.svg");
+}
+.catalog .catalogContainer .card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  background-color: #888888;
+}
+@media (max-width: 1160px) {
+  .catalog .catalogContainer {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog .catalogContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .catalog .catalogContainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+
+.catalog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./img/wall.avif) no-repeat center;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: 1;
+  opacity: 0.8;
+}/*# sourceMappingURL=catalog.module_20250125061902.css.map */

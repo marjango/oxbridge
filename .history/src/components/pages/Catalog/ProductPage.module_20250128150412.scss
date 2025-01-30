@@ -1,0 +1,191 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    // background-color: #FF3E3E;
+    .card {
+      width: 600px;
+      height: 720px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .colors {
+        width: auto;
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        top: 25px;
+        left: 12px;
+        .color1, .color2, .color3 {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 2px solid black;
+        }
+        .color1 {
+          background-color: black;
+        }
+        .color2 {
+          background-color: #FF3E3E;
+        }
+        .color3 {
+          background-color: #F1D8A1;
+        }
+      }
+      .add {
+        position: absolute;
+        top: 25px;
+        right: 0;
+
+        .moreBtn {
+          width: 170px;
+          height: 45px;
+          background-color: #D9D9D9;
+          border: none;
+          font-family: "Inter", serif;
+          font-weight: 300;
+          font-size: 14px;
+          letter-spacing: 1.57px;
+          line-height: 20px;
+        }
+      }
+      .btnGroup {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        .btn1,
+        .btn2 {
+            width: 170px;
+            height: 45px;
+            background-color: #EDEDED;
+            font-family: "Inter", serif;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 1.57px;
+            line-height: 20px;
+            border: none;
+            transition: 0.3s;
+            &:hover {
+                background-color: #D9D9D9;
+            }
+        }
+        .btnExtra {
+          display: inline-block;
+          width: 150px;
+          height: 45px;
+          background-color: #EDEDED;
+          font-family: "Inter", serif;
+          font-weight: 300;
+          font-size: 16px;
+          border: none;
+          position: absolute;
+          top: 0;
+          right: -150px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span{
+            width: 25px;
+            height: 25px;
+            background-image: url(./img/plus.svg);
+            margin-right: 35px;
+          }
+        }
+      }
+      .btnGroup.active {
+        display: flex;
+      }
+      // .btn1:hover + .btnExtra {
+      //     display: inline-block;
+      // }
+
+      .arrows {
+        .left, .right {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: #D9D9D9;
+        }
+        .left {
+          position: absolute;
+          top: 338px;
+          left: 16px;
+          background-image: url(./img/arrow.svg);
+          background-size: 60%;
+          background-repeat: no-repeat; 
+          background-position: center;
+        }
+        .right {
+          position: absolute;
+          top: 338px;
+          right: 16px;
+          background-image: url(./img/arrow.svg);
+          transform: rotate(180deg);
+          background-size: 60%;
+          background-repeat: no-repeat; 
+          background-position: center;
+        }
+      }
+      .cardImg {
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        top: 30px;
+        bottom: 0;
+        object-fit: cover;
+        background-repeat: no-repeat; 
+        background-size: contain;     
+        background-position: center;
+        z-index: -1;
+      }
+      .productDetails {
+        position: absolute;
+        bottom: 0;
+        width: 600px;
+        height: 70px;
+        background-color: #828282;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        p {
+          font-size: 20px;
+          color: white;
+          letter-spacing: 1.37px;
+          line-height: 30px;
+          text-transform: lowercase;
+          font-family: "Inter", serif;
+          font-weight: 250;
+        }
+        .buttons {
+          display: flex;
+          gap: 16px;
+          margin-left: 70px;
+          .cartIcon {
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat; 
+            background-size: cover;     
+            background-position: center;
+            background-image: url(./img/shopping-cart\ 1.svg);
+          }
+          .heartIcon {
+            width: 35px;
+            height: 35px;
+            background-repeat: no-repeat; 
+            background-size: cover;     
+            background-position: center;
+            background-image: url(./img/heart.svg);
+          }
+        }
+      }
+    }
+    
+      
+  }
+  
+

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    .card {
+      width: 806px;
+      height: 1069px;
+      position: relative;
+      .colors {
+        display: flex;
+        gap: 35px;
+        position: absolute;
+        top: ;
+        .color1, .color1, .color1 {
+          width: 55px;
+          height: 55px;
+          border: 1px solid black;
+        }
+        .color1 {
+          background-color: black;
+        }
+        .color2 {
+          background-color: #FF3E3E;
+        }
+        .color13 {
+          background-color: F1D8A1;
+        }
+      }
+
+    }
+    .cardImg {
+        width: 300px;
+        height: 300px;
+      }
+      
+      .productImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+  
+

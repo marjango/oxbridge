@@ -1,0 +1,54 @@
+.catalog {
+  font-size: 50px;
+  color: black;
+  height: 400px;
+  text-align: center;
+  width: 100%;
+  margin-top: 200px;
+}
+.catalog .catalogContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 81px;
+       column-gap: 81px;
+  row-gap: 54px;
+  margin: 0 auto;
+}
+.catalog .catalogContainer .card {
+  width: 230px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #840707;
+  padding: 15px 13px 11px 13px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.catalog .catalogContainer .card .cardImg {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.catalog .catalogContainer .card h1 {
+  font-family: "Inter";
+  font-size: 12px;
+  text-transform: lowercase;
+  color: white;
+  position: relative;
+  margin-top: 10px;
+}
+.catalog .catalogContainer .card span {
+  position: absolute;
+  background-image: url(./img/heart.svg);
+  background: transparent;
+  width: 27px;
+  height: 27px;
+  bottom: 7px;
+  right: 14px;
+}
+.catalog .catalogContainer .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=catalog.module_20250121082105.css.map */

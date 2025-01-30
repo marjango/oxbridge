@@ -1,0 +1,293 @@
+@charset "UTF-8";
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  font-family: "montserrat";
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .burger {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .burger {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .navBtn {
+    display: none;
+  }
+}
+.btnBurger {
+  z-index: 100;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  position: relative;
+}
+.btnBurger span {
+  height: 2px;
+  width: 40px;
+  position: absolute;
+  background-color: white;
+  transition: 0.4s;
+}
+.btnBurger span:nth-child(3) {
+  bottom: 7px;
+}
+.btnBurger span:nth-child(2) {
+  top: 7px;
+}
+.btnBurger span:nth-child(1) {
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+}
+
+.burgerContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid white;
+  height: 100%;
+  background-color: black;
+  transform: translateY(100%);
+  transition: transform 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.burgerContent ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.burgerContent ul li {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.burgerContent.open {
+  transform: translateY(0);
+}
+
+.btnBurger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(0px, 8px);
+}
+
+.btnBurger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.btnBurger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -5px);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  .btnBurger {
+    display: block;
+  }
+}
+#loading-screen {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  border-bottom: 1px white solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  animation: slideUp 1s ease-in-out 1.3s forwards; /* Анимация уходит вверх */
+}
+
+#loading-screen h1 {
+  color: white;
+  font-family: "Abel", sans-serif;
+  font-size: 70px;
+  letter-spacing: 10px;
+  font-weight: 900;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+header .navbar {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  padding: 30px 0px;
+  z-index: 100;
+}
+header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1.67px;
+  margin: 0 auto;
+}
+header .navbar .container .logo {
+  font-family: "abel";
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 1.67px;
+  text-decoration: none;
+  color: black;
+}
+header .navbar .container ul {
+  display: flex;
+  list-style: none;
+  gap: 89px;
+  font-size: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+  letter-spacing: 1.67px;
+}
+header .navbar .container ul .links {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  header .navbar .container ul {
+    display: none;
+  }
+}
+header .navbar .container button {
+  background-color: black;
+  color: white;
+  padding: 6px 70px;
+  cursor: pointer;
+  letter-spacing: 1.67px;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  padding: 30px 0;
+}
+footer .footerBox {
+  display: flex;
+  margin: 0px auto;
+  padding-top: 50px;
+  justify-content: space-between;
+}
+footer .footerBox .links {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 15px;
+}
+footer .footerBox .socialMedia {
+  margin-top: 60px;
+}
+footer .footerBox .socialMedia h1 {
+  font-family: "abel";
+  font-weight: 900;
+  color: white;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+footer .footerBox .socialMedia div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+footer .footerBox .socialMedia div button {
+  background-color: transparent;
+  border: none;
+}
+footer .footerBox .socialMedia div button img {
+  width: 30px;
+  height: 30px;
+}
+footer .footerBox .links2 {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  footer .footerBox {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    padding-top: 250px;
+    gap: 30px;
+  }
+  footer .footerBox .socialMedia {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+  }
+  footer .footerBox .socialMedia h1 {
+    font-size: 75px;
+    font-weight: 400;
+  }
+  footer .footerBox .socialMedia div button {
+    width: 50px;
+    height: 50px;
+  }
+  footer .footerBox .socialMedia div button img {
+    width: 50px;
+    height: 50px;
+  }
+  footer .footerBox .links {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style_20250127175638.css.map */
