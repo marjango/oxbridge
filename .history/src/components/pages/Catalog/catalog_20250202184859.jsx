@@ -22,7 +22,7 @@ const Catalog = () => {
             </div>
             <div className={s.cardFooter}>
               <h1>{product.name}</h1>
-              <LikeButton productId={product.id} size="catalog" /> 
+              <LikeButton productId={456} size="catalog" />
             </div>
           </article>
         ))}

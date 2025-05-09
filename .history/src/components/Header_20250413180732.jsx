@@ -3,6 +3,7 @@ import  './style.css'
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
 
+
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,7 +26,7 @@ export default function Header() {
                         <span></span>
                     </div>
                     <div className={`burgerContent ${isMenuOpen ? "open" : ""}`}>
-                            <Link className='links' to='/Homepage'>главное</Link>
+                            <Link className='links' to='/' onClick={closeMenu}>OXBRIDGE</Link>
                             <Link className='links' to='/Catalog' onClick={closeMenu}>КАТАЛОГ</Link>
                             <Link className='links' to='/Seasonal' onClick={closeMenu}>СЕЗОННЫЕ</Link>
                             <Link className='links' to='/Feedback' onClick={closeMenu}>СВЯЗАТЬСЯ С НАМИ</Link>

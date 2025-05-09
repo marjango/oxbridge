@@ -15,7 +15,6 @@ const LikeButton = ({ productId, size = "catalog" }) => {
     };
 
     window.addEventListener("storage", syncLikes);
-
     return () => window.removeEventListener("storage", syncLikes);
   }, [productId]);
 
@@ -27,8 +26,7 @@ const LikeButton = ({ productId, size = "catalog" }) => {
     localStorage.setItem("likedProducts", JSON.stringify(savedLikes));
 
     setLiked(newLikeState);
-
-    window.dispatchEvent(new Event("storage"));
+    window.dispatchEvent(new Event("storage")); // Вызов обновления в других вкладках/компонентах
   };
 
   const buttonSize = size === "product" ? 35 : 27;

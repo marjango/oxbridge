@@ -59,7 +59,7 @@ export default function ProductPage() {
                     <p>Материал: {product.material}</p>
                     <div className={s.buttons}>
                         <span className={s.cartIcon}></span>
-                          <LikeButton productId={product.id} size="product" />
+                        <LikeButton productId={product.id} size="product" />
                     </div>
                 </div>
             </div>

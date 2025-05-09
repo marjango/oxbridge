@@ -11,6 +11,11 @@ const Catalog = () => {
     navigate(`/product/${id}`);
     window.scrollTo(0, 0);
 };
+useEffect(() => {
+  const syncCatalog = () => setProducts([...products]); // Форсируем ререндер
+  window.addEventListener("storage", syncCatalog);
+  return () => window.removeEventListener("storage", syncCatalog);
+}, [products]);
 
   return (
     <section className={s.catalog}>
@@ -22,7 +27,7 @@ const Catalog = () => {
             </div>
             <div className={s.cardFooter}>
               <h1>{product.name}</h1>
-              <LikeButton productId={product.id} size="catalog" /> 
+              <LikeButton productId={456} size="catalog" />
             </div>
           </article>
         ))}
